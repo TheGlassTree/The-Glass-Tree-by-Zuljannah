@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lokasi - Glass House Glenmarie</title>
+  
+  <!-- Bootstrap 5 CSS for layout utilities -->
+  <link href="https://jsdelivr.net" rel="stylesheet">
+  <!-- Google Fonts for typography -->
+  <link href="https://googleapis.com" rel="stylesheet">
+  
+  <style>
+    body {
+      background-color: #f5f5f5;
+      font-family: 'Poppins', sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      margin: 0;
+    }
+
+    /* Target Popup Wrapper */
+    .popup-card {
+      position: relative;
+      width: 100%;
+      max-width: 400px;
+      padding: 24px;
+      border-radius: 12px;
+      color: #000000 !important;
+      overflow: hidden;
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+      /* Exact overlay background color from your snippet */
+      background: rgba(214, 185, 141, 0.9) !important; 
+      text-align: center;
+    }
+
+    .location-title {
+      font-size: 18px;
+      font-weight: 600;
+      letter-spacing: 2px;
+    }
+
+    .ql-font-CinzelDecorative {
+      font-family: 'Cinzel Decorative', serif;
+      font-weight: 700;
+      font-size: 18px;
+      display: block;
+      margin-bottom: 8px;
+    }
+
+    .address-text {
+      font-size: 14px;
+      line-height: 1.6;
+      color: #222;
+    }
+
+    /* Custom Navigation Buttons */
+    .btn-card {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      border: 1px solid #000000 !important;
+      color: #000000 !important;
+      background-color: transparent;
+      padding: 10px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: 500;
+      transition: all 0.3s ease;
+      width: 100%;
+    }
+
+    .btn-card:hover {
+      background-color: #000000;
+      color: #ffffff !important;
+    }
+
+    .btn-card:hover .icon-svg {
+      fill: #ffffff;
+    }
+
+    .w-48 {
+      width: 48%;
+    }
+
+    .icon-svg {
+      width: 18px;
+      height: 18px;
+      fill: #000000;
+      transition: fill 0.3s ease;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Main Popup Component -->
+  <div id="popup-map" class="popup-card">
+    
+    <h5 class="mt-2 text-uppercase mb-4 location-title">
+      LOKASI
+    </h5>
+    
+    <div id="address" class="m-3 address-text">
+      <span class="ql-font-CinzelDecorative">Glass House Glenmarie</span>
+      <p class="m-0">LOT 16859, 3 Stone Park, Jalan Penyair U1/44,</p>
+      <p class="m-0">Hicom-Glenmarie Industrial Park,</p>
+      <p class="m-0">40150 Shah Alam, Selangor</p>
+    </div>
+    
+    <!-- Action Buttons Group -->
+    <div class="d-flex justify-content-between mt-4 mx-1">
+      <!-- Google Maps Button -->
+      <div class="w-48">
+        <a href="https://maps.app.goo.gl/48DvJ8Ru8PncxtNp6" target="_blank" rel="noopener noreferrer" class="btn-card">
+          <!-- Inline Google Maps Icon -->
+          <svg class="icon-svg" viewBox="0 0 24 24">
+            <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+          </svg>
+          <span>Maps</span>
+        </a>
+      </div>
+      
+      <!-- Waze Button -->
+      <div class="w-48">
+        <a href="https://ul.waze.com/ul?place=ChIJZdND6iZNzDERUzPc8RyRkj8&amp;ll=3.07993400%2C101.56695040&amp;navigate=yes" target="_blank" rel="noopener noreferrer" class="btn-card">
+          <!-- Inline Navigation/Waze Icon -->
+          <svg class="icon-svg" viewBox="0 0 24 24">
+            <path d="M21.71 11.29l-9-9a.996.996 0 00-1.41 0l-9 9a.996.996 0 000 1.41l9 9c.39.39 1.03.39 1.41 0l9-9a.996.996 0 000-1.41zM14 14.5V12h-4v3H8v-4c0-.55.45-1 1-1h5V7.5l3.5 3.5-3.5 3.5z"/>
+          </svg>
+          <span>Waze</span>
+        </a>
+      </div>
+    </div>
+
+  </div>
+
+</body>
+</html>
