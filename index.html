@@ -1,110 +1,19 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lokasi - Glass House Glenmarie</title>
-    <!-- Include Bootstrap CSS for layout structures used in your original classes -->
-    <link href="https://jsdelivr.net" rel="stylesheet">
-    <!-- Include Cinzel Decorative font for the title styling -->
-    <link href="https://googleapis.com" rel="stylesheet">
+<section class="lokasi-section">
+    <h5>LOKASI</h5>
+    <p class="address-details">
+        <strong>The Glass Tree by Zuljannah</strong><br>
+        563, Jalan Dato Mohd Sidin,<br>
+        41300, Klang,<br>
+        Selangor Darul Ehsan
+    </p>
     
-    <style>
-        /* Setup full page background */
-        body {
-            margin: 0;
-            padding: 0;
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            /* Applies your original rgba(214, 185, 141, 0.7) color over a clean surface */
-            background-color: rgba(214, 185, 141, 0.7); 
-            font-family: sans-serif;
-            color: #000000 !important;
-        }
-
-        /* Container styled to look like your card but scaled for full page view */
-        .map-card-container {
-            max-width: 500px;
-            width: 90%;
-            padding: 2.5rem 2rem;
-            background: #ffffff;
-            border-radius: 16px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-        }
-
-        /* Applying the specific decorative font from your snippet classes */
-        .ql-font-CinzelDecorative {
-            font-family: 'Cinzel Decorative', serif;
-            font-weight: 700;
-        }
-
-        .ql-align-center {
-            text-align: center;
-            margin-bottom: 0.5rem;
-        }
-
-        /* Custom styling for your navigation buttons */
-        .btn-card {
-            border: 1px solid #000000 !important;
-            color: #000000 !important;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 10px 20px;
-            text-decoration: none;
-            border-radius: 8px;
-            transition: background-color 0.2s ease, color 0.2s ease;
-            font-weight: 500;
-        }
-
-        .btn-card:hover {
-            background-color: #000000 !important;
-            color: #ffffff !important;
-        }
-
-        /* Flexible width sizing derived from your w-48 framework classes */
-        .w-48 {
-            width: 48%;
-        }
-    </style>
-</head>
-<body>
-
-    <div class="map-card-container">
-        <!-- Section Header -->
-        <h5 class="text-center text-uppercase mb-4" style="font-size: 20px; letter-spacing: 2px;">
-            LOKASI
-        </h5> 
-        
-        <!-- Address Details -->
-        <div id="address" class="mb-4">
-            <p class="ql-align-center">
-                <span class="ql-font-CinzelDecorative" style="font-size: 18px;">Glass House Glenmarie</span>
-            </p>
-            <p class="ql-align-center">LOT 16859, 3 Stone Park, Jalan Penyair U1/44,</p>
-            <p class="ql-align-center">Hicom-Glenmarie Industrial Park,</p>
-            <p class="ql-align-center">40150 Shah Alam, Selangor</p>
-        </div> 
-        
-        <!-- Navigation Buttons -->
-        <div class="d-flex justify-content-between mx-auto" style="max-width: 320px;">
-            <!-- Google Maps Button -->
-            <div class="w-48">
-                <a href="https://maps.app.goo.gl/48DvJ8Ru8PncxtNp6" target="_blank" rel="noopener noreferrer" class="w-100 btn-card">
-                    <span class="px-1">Google Maps</span>
-                </a>
-            </div> 
-            
-            <!-- Waze Button -->
-            <div class="w-48">
-                <a href="https://ul.waze.com/ul?place=ChIJZdND6iZNzDERUzPc8RyRkj8&amp;ll=3.07993400%2C101.56695040&amp;navigate=yes" target="_blank" rel="noopener noreferrer" class="w-100 btn-card">
-                    <span class="px-1">Waze</span>
-                </a>
-            </div>
-        </div>
+    <!-- Side-by-Side Map Buttons Container -->
+    <div class="map-button-container">
+        <a href="https://google.com" target="_blank" class="map-btn google-btn">
+            Google Maps
+        </a>
+        <a href="https://www.waze.com/live-map/directions/my/selangor/klang/zuljannah-palace?to=place.ChIJ8-Qe9hxTzDERnH2fVg1lj8w" target="_blank" class="map-btn waze-btn">
+            Waze
+        </a>
     </div>
-
-</body>
-</html>
+</section>
