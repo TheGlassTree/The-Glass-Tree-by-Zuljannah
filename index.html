@@ -1,379 +1,407 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
+<html lang="en"><head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>1920w light</title>
+
+  <!-- Mobile / iPhone safe-area support -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+
+  <meta name="theme-color" content="#4F6C34">
+  <meta name="description" content="Wedding location — The Glass Tree by Zuljannah, Klang, Selangor.">
+
+  <title>Lokasi Majlis | The Glass Tree by Zuljannah</title>
+
+  <!-- Elegant serif fonts similar to the reference design -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700;800;900&family=Cormorant+Infant:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-  
-  <style>
-    /* Reset */
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Display:wght@400&amp;family=Cormorant+Garamond:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+
+  <style>    :root {
+      /*
+        Green sampled from the thick border in your Image 2:
+        RGB 79 / 108 / 52  =  #4F6C34
+      */
+      --green: #4F6C34;
+      --green-deep: #4D6A31;
+
+      --white: #FFFFFF;
+      --glass: rgba(255, 255, 255, 0.115);
+      --glass-border: rgba(255, 255, 255, 0.38);
+
+      --panel-radius: 30px;
+      --button-radius: 24px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html,
     body {
+      width: 100%;
+      min-height: 100%;
       margin: 0;
-      padding: 20px;
-      background: #f0f0f0;
-      display: flex;
-      justify-content: center;
-      align-items: flex-start;
-      min-height: 100vh;
-      font-family: sans-serif;
+      padding: 0;
     }
 
-    .frame-wrapper {
+    body {
+      min-height: 100svh;
+      min-height: 100dvh;
+
+      /*
+        The entire page background is the green from Image 2.
+      */
+      background:
+        var(--green);
+
+      color: var(--white);
+      font-family: "Cormorant Garamond", Georgia, serif;
+
+      /* Helps avoid accidental horizontal scrolling on phones */
+      overflow-x: hidden;
+
+      /* Prevents mobile browsers from applying tap highlights */
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    /*
+      Subtle ambient glow behind the glass panel.
+      It gives the panel a soft "frosted glass" appearance without
+      changing the main green background.
+    */
+    body::before {
+      content: "";
+      position: fixed;
+      inset: -20%;
+      z-index: 0;
+      pointer-events: none;
+    }
+
+    /*
+      Full-screen stage.
+      The panel is vertically and horizontally centered,
+      as requested.
+    */
+    .page {
       position: relative;
-      width: 1920px;
-      height: 1443.340087890625px;
-      background-color: #ffffff;
-      
-      
-      
+      z-index: 1;
+
+      min-height: 100svh;
+      min-height: 100dvh;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      padding:
+        max(28px, env(safe-area-inset-top))
+        20px
+        max(28px, env(safe-area-inset-bottom));
     }
 
-    /* Element Styles */
-.layer-main-1 {
-  position: absolute;
-  left: 0px;
-  top: 6px;
-  z-index: 1;
-  width: 1920px;
-  height: 1437px;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  padding: 319.1700134277344px 20px 319.1700134277344px 20px;
-}
-.layer-section-2 {
-  width: 640px;
-  height: 674px;
-  flex-shrink: 0;
-  background-color: #ffffff1d;
-  border-radius: 30px 30px 30px 30px;
-  border: 1px solid #ffffff61;
-  box-shadow: inset 0px -1px 0px 1px #00000014, inset 0px 1px 0px 1px #ffffff2e, 0px 4px 14px 0px #0000001c, 0px 18px 44px 0px #00000038;
-  display: flex;
-  flex-direction: column;
-  gap: 18px;
-  justify-content: center;
-  align-items: center;
-  padding: 40px 34px 40px 34px;
-  position: relative;
-}
-.layer-heading-1-3 {
-  width: 570px;
-  height: 45px;
-  flex-shrink: 0;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
-  position: relative;
-  align-self: stretch;
-}
-.text-1 {
-  box-shadow: 0px 1px 2px 0px #0000001f;
-  font-family: 'Cormorant Garamond', sans-serif;
-  font-size: 28px;
-  font-weight: 600;
-  line-height: 44.84000015258789px;
-  letter-spacing: 1.7100000381469727px;
-  text-align: center;
-  text-transform: none;
-  white-space: nowrap;
-  color: #ffffff;
-}
-.layer-the-glass-tree-by-zuljannah-4 {
-  width: 570px;
-  height: 118px;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;
-  padding: 13px 0px 0px 0px;
-  position: relative;
-  align-self: stretch;
-  flex-grow: 1;
-}
-.layer-container-5 {
-  width: 570px;
-  height: 44px;
-  flex-shrink: 0;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
-  position: relative;
-  align-self: stretch;
-}
-.text-2 {
-  box-shadow: 0px 1px 2px 0px #00000026;
-  font-family: 'Cormorant Garamond', sans-serif;
-  font-size: 42px;
-  font-weight: 700;
-  line-height: 44px;
-  letter-spacing: 3.200000047683716px;
-  text-align: center;
-  text-transform: none;
-  white-space: nowrap;
-  color: #ffffff;
-}
-.layer-container-6 {
-  width: 570px;
-  height: 45px;
-  flex-shrink: 0;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
-  position: relative;
-  align-self: stretch;
-}
-.text-3 {
-  box-shadow: 0px 1px 2px 0px #00000026;
-  font-family: 'Cormorant Garamond', sans-serif;
-  font-size: 36px;
-  font-weight: 600;
-  line-height: 44.84000015258789px;
-  letter-spacing: 1.7100000381469727px;
-  text-align: center;
-  text-transform: none;
-  white-space: nowrap;
-  color: #ffffff;
-}
-.layer-container-7 {
-  width: 570px;
-  height: 27px;
-  flex-shrink: 0;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
-  position: relative;
-  align-self: stretch;
-}
-.text-4 {
-  font-family: 'Cormorant Garamond', sans-serif;
-  font-size: 22px;
-  font-weight: 500;
-  letter-spacing: 0.2800000011920929px;
-  text-align: center;
-  text-transform: none;
-  white-space: nowrap;
-  color: #ffffffc7;
-}
-.layer-google-maps-8 {
-  width: 570px;
-  height: 173px;
-  flex-shrink: 0;
-  display: flex;
-  flex-direction: row;
-  gap: 15px;
-  justify-content: center;
-  align-items: flex-start;
-  padding: 17px 0px 0px 0px;
-  position: relative;
-  align-self: stretch;
-}
-.layer-link-open-this-wedding-location-in-google-maps-9 {
-  width: 278px;
-  height: 156px;
-  background-color: #ffffff09;
-  border-radius: 24px 24px 24px 24px;
-  border: 2px solid #fffffff5;
-  box-shadow: 0px 2px 8px 0px #0000000a, inset 0px 1px 0px 2px #ffffff0f;
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-  justify-content: center;
-  align-items: center;
-  padding: 14.5px 18px 14.5px 18px;
-  position: relative;
-  flex-grow: 1;
-}
-.layer-ffffff-10 {
-  width: 47px;
-  height: 47px;
-  flex-shrink: 0;
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  position: relative;
-}
-.layer-container-11 {
-  width: 157px;
-  height: 30px;
-  flex-shrink: 0;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  position: relative;
-}
-.text-5 {
-  width: 157px;
-  font-family: 'Cormorant Garamond', sans-serif;
-  font-size: 30px;
-  font-weight: 700;
-  line-height: 30px;
-  letter-spacing: 0em;
-  text-align: center;
-  text-transform: none;
-  color: #ffffff;
-  align-self: stretch;
-}
-.layer-link-open-this-wedding-location-in-waze-12 {
-  width: 278px;
-  height: 156px;
-  background-color: #ffffff09;
-  border-radius: 24px 24px 24px 24px;
-  border: 2px solid #fffffff5;
-  box-shadow: 0px 2px 8px 0px #0000000a, inset 0px 1px 0px 2px #ffffff0f;
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-  justify-content: center;
-  align-items: center;
-  padding: 14.5px 18px 14.5px 18px;
-  position: relative;
-  flex-grow: 1;
-}
-.layer-ffffff-13 {
-  width: 47px;
-  height: 47px;
-  flex-shrink: 0;
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-}
-.layer-container-14 {
-  width: 63px;
-  height: 30px;
-  flex-shrink: 0;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
-  position: relative;
-}
-.text-6 {
-  font-family: 'Cormorant Garamond', sans-serif;
-  font-size: 30px;
-  font-weight: 700;
-  line-height: 30px;
-  letter-spacing: 0em;
-  text-align: center;
-  text-transform: none;
-  white-space: nowrap;
-  color: #ffffff;
-}
-.layer-address-15 {
-  width: 570px;
-  height: 157px;
-  flex-shrink: 0;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;
-  padding: 7px 0px 0px 0px;
-  position: relative;
-  align-self: stretch;
-}
-.text-7 {
-  width: 570px;
-  height: 150px;
-  box-shadow: 0px 1px 2px 0px #00000024;
-  font-family: 'Cormorant Infant', sans-serif;
-  font-size: 24px;
-  font-weight: 600;
-  line-height: 37.5px;
-  letter-spacing: 0em;
-  text-align: center;
-  text-transform: none;
-  color: #ffffff;
-  align-self: stretch;
-  flex-grow: 1;
-}
-  </style>
+    /*
+      Frosted glass panel.
+      On supported mobile browsers, backdrop-filter creates the
+      see-through glass look.
+    */
+    .location-card {
+      width: min(640px, 94vw);
+      padding: 40px 34px 30px;
+
+      background: var(--glass);
+      border: 1px solid var(--glass-border);
+      border-radius: var(--panel-radius);
+
+      backdrop-filter: blur(18px) saturate(110%);
+      -webkit-backdrop-filter: blur(18px) saturate(110%);
+
+      box-shadow:
+        0 18px 44px rgba(0, 0, 0, 0.22),
+        0 4px 14px rgba(0, 0, 0, 0.11),
+        inset 0 1px 0 rgba(255, 255, 255, 0.18),
+        inset 0 -1px 0 rgba(0, 0, 0, 0.08);
+
+      text-align: center;
+    }
+
+    .header {
+      margin: 0 0 31px;
+
+      font-family: "Cormorant Garamond", Georgia, serif;
+      font-size: clamp(27px, 5.3vw, 40px);
+      font-weight: 500;
+      letter-spacing: 0.08em;
+      line-height: 1.1;
+
+      color: var(--white);
+      text-shadow: 0 1px 2px rgba(0, 0, 0, 0.12);
+    }
+
+    .location-name {
+      margin: 0;
+
+      font-family: "Cormorant Garamond", Georgia, serif;
+      font-size: clamp(26px, 5.1vw, 38px);
+      font-weight: 600;
+      letter-spacing: 0.045em;
+      line-height: 1.18;
+
+      color: var(--white);
+      text-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
+    }
+
+    .location-name span {
+      display: block;
+    }
+
+    .address {
+      margin: 25px 0 35px;
+
+      font-size: clamp(21px, 4.15vw, 30px);
+      font-weight: 400;
+      line-height: 1.25;
+      font-style: normal;
+
+      color: var(--white);
+      text-shadow: 0 1px 2px rgba(0, 0, 0, 0.14);
+    }
+
+    .address-line {
+      display: block;
+    }
+
+    .map-buttons {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 15px;
+
+      width: 100%;
+    }
+
+    /*
+      The two buttons intentionally use the same style:
+      rounded outline + white icon + white text.
+    */
+    .map-button {
+      min-height: 80px;
+      width: 100%;
+
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+
+      padding: 12px 18px;
+
+      border: 2px solid rgba(255, 255, 255, 0.96);
+      border-radius: var(--button-radius);
+
+      background: rgba(255, 255, 255, 0.035);
+      color: var(--white);
+
+      text-decoration: none;
+
+      font-family: "Cormorant Garamond", Georgia, serif;
+      font-size: clamp(23px, 4.5vw, 30px);
+      font-weight: 700;
+      line-height: 1;
+
+      box-shadow:
+        inset 0 1px 0 rgba(255,255,255,0.06),
+        0 2px 8px rgba(0,0,0,0.04);
+
+      transition:
+        transform 150ms ease,
+        background-color 150ms ease,
+        box-shadow 150ms ease;
+    }
+
+    .map-button:hover {
+      background: rgba(255, 255, 255, 0.10);
+      box-shadow: 0 7px 18px rgba(0,0,0,0.12);
+    }
+
+    .map-button:active {
+      transform: scale(0.975);
+    }
+
+    .map-button:focus-visible {
+      outline: 3px solid rgba(255, 255, 255, 0.95);
+      outline-offset: 3px;
+    }
+
+    .icon {
+      flex: 0 0 auto;
+      width: 47px;
+      height: 47px;
+
+      display: block;
+      color: var(--white);
+    }
+
+    /*
+      Brand icons are loaded as SVG assets instead of approximated
+      with hand-drawn paths. The CDN SVGs are already white.
+    */
+    .brand-icon {
+      object-fit: contain;
+    }
+
+    .footer-note {
+      margin: 18px 0 0;
+
+      font-family: "Cormorant Garamond", Georgia, serif;
+      font-size: 14px;
+      font-weight: 500;
+      letter-spacing: 0.02em;
+
+      color: rgba(255, 255, 255, 0.78);
+    }
+
+    /*
+      Small-screen adjustments.
+    */
+    @media (max-width: 560px) {
+      .page {
+        padding-left: 13px;
+        padding-right: 13px;
+      }
+
+      .location-card {
+        width: 94vw;
+        padding: 31px 17px 22px;
+        border-radius: 27px;
+      }
+
+      .header {
+        margin-bottom: 24px;
+        letter-spacing: 0.06em;
+      }
+
+      .location-name {
+        font-size: clamp(22px, 6.4vw, 32px);
+        letter-spacing: 0.035em;
+      }
+
+      .address {
+        margin-top: 19px;
+        margin-bottom: 27px;
+        font-size: clamp(20px, 5.5vw, 27px);
+      }
+
+      .map-buttons {
+        gap: 12px;
+      }
+
+      .map-button {
+        min-height: 73px;
+        gap: 8px;
+        padding-left: 10px;
+        padding-right: 10px;
+        border-radius: 22px;
+        font-size: clamp(20px, 5.8vw, 26px);
+      }
+
+      .icon {
+        width: 41px;
+        height: 41px;
+      }
+
+      .footer-note {
+        display: none;
+      }
+    }
+
+    @media (max-width: 360px) {
+      .location-card {
+        width: 95vw;
+        padding-left: 13px;
+        padding-right: 13px;
+      }
+
+      .map-buttons {
+        gap: 8px;
+      }
+
+      .map-button {
+        min-height: 68px;
+        gap: 5px;
+        border-width: 1.8px;
+        font-size: 19px;
+      }
+
+      .icon {
+        width: 37px;
+        height: 37px;
+      }
+    }
+
+    /*
+      Respects users who request reduced motion.
+    */
+    @media (prefers-reduced-motion: reduce) {
+      .map-button {
+        transition: none;
+      }
+    }</style>
 </head>
+
 <body>
-  <div class="frame-wrapper">
-<div class="layer-main-1">
-<div class="layer-section-2">
-<div class="layer-heading-1-3">
-<h3 class="text-1">LOKASI MAJLIS</h3>
-</div>
-<div class="layer-the-glass-tree-by-zuljannah-4">
-<div class="layer-container-5">
-<h1 class="text-2">THE GLASS TREE</h1>
-</div>
-<div class="layer-container-6">
-<h2 class="text-3">BY ZULJANNAH</h2>
-</div>
-</div>
-<div class="layer-container-7">
-<p class="text-4">Sila pilih aplikasi peta pilihan anda.</p>
-</div>
-<div class="layer-google-maps-8">
-<div class="layer-link-open-this-wedding-location-in-google-maps-9">
-<div class="layer-ffffff-10"><svg overflow="visible" preserveAspectRatio="xMidYMid meet" width="100%" height="100%" viewBox="0 0 47 47" fill="none" xmlns="http://www.w3.org/2000/svg">
-<g clip-path="url(#svg_id_1_2956_clip0_1_2956)">
-<g clip-path="url(#svg_id_1_2956_clip1_1_2956)">
-<path d="M38.2404 9.39807C40.6139 14.5054 40.0753 20.5175 37.4473 25.4035C35.2911 29.4122 32.0736 32.7277 29.422 36.3976C28.2098 38.0779 26.9858 39.8247 26.1535 41.738C25.8774 42.3745 25.6385 43.0266 25.4035 43.6807C25.1665 44.3328 24.9648 44.9986 24.7377 45.6547C24.5242 46.2696 24.2755 46.9942 23.5098 47H23.4961C22.5835 46.9981 22.3622 45.9621 22.135 45.263C21.5789 43.5514 20.9973 41.9084 20.1395 40.3182C19.1408 38.4695 17.8972 36.7599 16.6341 35.0875L38.2404 9.39807ZM16.734 15.089L8.98092 24.3069C10.3988 27.3227 12.547 29.9136 14.6033 32.4927C15.087 33.0998 15.5707 33.7108 16.0466 34.3257L25.8069 22.7226L25.7501 22.7422C22.3407 23.9191 18.5219 22.1723 17.1491 18.851C16.9613 18.4001 16.8241 17.9298 16.7398 17.4488C16.6165 16.593 16.589 15.9585 16.732 15.1027L16.734 15.089ZM10.7552 6.16682L10.7493 6.17466C6.93642 11.0039 6.28233 17.6897 8.56183 23.3492L17.9325 12.2083L17.8189 12.1104L10.7552 6.16682ZM28.7111 0.853865L21.195 9.78974C21.2123 9.78236 21.23 9.77582 21.2479 9.77016C24.3813 8.69112 27.9121 10.0639 29.5121 12.9544C29.8568 13.5791 30.1446 14.2919 30.2504 15.0009C30.3835 15.8743 30.4168 16.5147 30.2739 17.39L30.268 17.4214L37.7802 8.48941C35.817 4.90888 32.5899 2.18861 28.7288 0.85974L28.7111 0.853865ZM18.5376 11.4915L27.7339 0.558157L27.6419 0.534657C26.2811 0.176958 24.8796 -0.00274853 23.4726 3.17717e-05C21.1943 0.0213713 18.945 0.51358 16.866 1.44575C14.787 2.37791 12.9232 3.72989 11.3916 5.41678L11.3603 5.45203L18.5376 11.4915Z" fill="white"/>
-</g>
-</g>
-<defs>
-<clipPath id="svg_id_1_2956_clip0_1_2956">
-<rect width="47" height="47" fill="white"/>
-</clipPath>
-<clipPath id="svg_id_1_2956_clip1_1_2956">
-<rect width="47" height="47" fill="white"/>
-</clipPath>
-</defs>
-</svg>
-</div>
-<div class="layer-container-11">
-<h3 class="text-5">Google Maps</h3>
-</div>
-</div>
-<div class="layer-link-open-this-wedding-location-in-waze-12">
-<div class="layer-ffffff-13"><svg overflow="visible" preserveAspectRatio="xMidYMid meet" width="100%" height="100%" viewBox="0 0 47 47" fill="none" xmlns="http://www.w3.org/2000/svg">
-<g clip-path="url(#svg_id_1_2965_clip0_1_2965)">
-<g clip-path="url(#svg_id_1_2965_clip1_1_2965)">
-<path d="M25.8852 0C19.4169 0 13.3852 2.91792 9.2492 8.12317C6.28233 11.8695 4.72545 16.4892 4.72545 21.2558V24.6613C4.72545 26.412 3.51129 28.0649 1.07904 28.2118C0.495455 28.2607 0.00782968 28.6504 0.00782968 29.234C-0.090087 30.8398 1.61366 33.7578 3.948 36.0921C5.55383 37.7449 7.4495 39.059 9.494 40.0793C9.34275 40.9252 9.37893 41.7941 9.59999 42.6245C9.82105 43.455 10.2216 44.2268 10.7734 44.8856C11.3252 45.5444 12.0149 46.0742 12.7937 46.4375C13.5725 46.8008 14.4215 46.9888 15.2809 46.9883C16.6314 46.9985 17.9433 46.5377 18.9909 45.6853C20.0384 44.8329 20.7562 43.642 21.0207 42.3176H25.9342C26.5667 45.6252 30.0193 47.9106 33.7166 46.6455C36.9283 45.5763 38.3383 41.9279 37.1692 38.961C38.4542 38.1168 39.659 37.1564 40.7686 36.0921C42.7477 34.1323 44.3174 31.7986 45.3865 29.2267C46.4556 26.6548 47.0027 23.8961 46.9961 21.1108C46.9961 15.4669 44.8067 10.1657 40.8175 6.17854C36.8423 2.24152 31.4801 0.0228047 25.8852 0ZM25.8852 2.38329C30.8947 2.38329 35.6123 4.32988 39.1627 7.88033C40.9114 9.62008 42.2976 11.6894 43.2412 13.9685C44.1848 16.2476 44.6669 18.6912 44.6598 21.1578C44.6676 23.6245 44.1861 26.0683 43.2432 28.3477C42.3004 30.6271 40.9148 32.6969 39.1667 34.4373C35.6377 37.9471 30.8663 39.9225 25.8892 39.9343H21.0717C20.8027 38.6083 20.0855 37.4154 19.0406 36.5559C17.9956 35.6964 16.6867 35.2228 15.3337 35.2148C14.3495 35.2144 13.3805 35.4589 12.5143 35.9262C11.648 36.3935 10.9116 37.069 10.3713 37.8918V37.9388C8.61218 37.0457 7.01654 35.8619 5.65175 34.4373C3.99891 32.7845 3.07458 31.2765 2.68487 30.3052C3.76957 30.0464 4.75223 29.4695 5.50683 28.6485C6.51562 27.5668 7.07262 26.1403 7.0637 24.6613V21.1578C7.0637 17.0258 8.4267 12.9387 11.0039 9.68004C14.6522 5.00942 20.0494 2.38329 25.8852 2.38329ZM21.1657 14.1059C20.5469 14.1064 19.9537 14.3526 19.5163 14.7903C19.079 15.228 18.8333 15.8214 18.8333 16.4402C18.833 16.7469 18.8932 17.0507 19.0104 17.3341C19.1276 17.6176 19.2995 17.8751 19.5163 18.0921C19.7331 18.3091 19.9905 18.4812 20.2739 18.5986C20.5572 18.7161 20.8609 18.7765 21.1676 18.7765C21.4742 18.7762 21.7777 18.7156 22.0608 18.5981C22.3439 18.4805 22.6011 18.3083 22.8177 18.0914C23.0343 17.8745 23.206 17.617 23.3231 17.3337C23.4401 17.0504 23.5003 16.7468 23.5 16.4402C23.5 15.8211 23.2541 15.2274 22.8163 14.7896C22.3785 14.3518 21.7848 14.1059 21.1657 14.1059ZM35.2735 14.1059C34.6544 14.1059 34.0606 14.3518 33.6229 14.7896C33.1851 15.2274 32.9392 15.8211 32.9392 16.4402C32.9389 16.7469 32.9991 17.0507 33.1163 17.3341C33.2335 17.6176 33.4054 17.8751 33.6222 18.0921C33.839 18.3091 34.0964 18.4812 34.3797 18.5986C34.6631 18.7161 34.9668 18.7765 35.2735 18.7765C35.5802 18.7765 35.8839 18.7161 36.1673 18.5986C36.4506 18.4812 36.708 18.3091 36.9248 18.0921C37.1416 17.8751 37.3135 17.6176 37.4307 17.3341C37.5479 17.0507 37.6081 16.7469 37.6078 16.4402C37.6078 15.8211 37.3619 15.2274 36.9241 14.7896C36.4864 14.3518 35.8926 14.1059 35.2735 14.1059ZM20.8269 23.4452C20.6304 23.4437 20.4367 23.4918 20.2638 23.5851C20.0909 23.6784 19.9443 23.8138 19.8377 23.9789C19.7311 24.1439 19.6678 24.3332 19.6538 24.5291C19.6398 24.7251 19.6755 24.9215 19.7576 25.1C20.5198 26.7132 21.7242 28.0769 23.2308 29.0327C24.7374 29.9884 26.4843 30.4969 28.2685 30.4991C30.0553 30.5075 31.8069 30.0034 33.3158 29.0464C34.8246 28.0894 36.0274 26.7198 36.7814 25.1C36.8636 24.9213 36.8993 24.7248 36.8852 24.5286C36.8711 24.3325 36.8077 24.1431 36.7008 23.978C36.5939 23.813 36.4471 23.6775 36.2739 23.5844C36.1007 23.4912 35.9068 23.4433 35.7102 23.4452H35.6612C35.4427 23.4444 35.2289 23.5088 35.0471 23.6302C34.8653 23.7516 34.7239 23.9245 34.641 24.1267C34.072 25.3353 33.1704 26.3569 32.0419 27.0717C30.9133 27.7865 29.6044 28.165 28.2685 28.1628C26.9327 28.1647 25.6239 27.7862 24.4954 27.0714C23.3669 26.3566 22.4653 25.3352 21.8961 24.1267C21.7946 23.9283 21.642 23.7605 21.454 23.6407C21.2661 23.5209 21.0496 23.4534 20.8269 23.4452Z" fill="white"/>
-</g>
-</g>
-<defs>
-<clipPath id="svg_id_1_2965_clip0_1_2965">
-<rect width="47" height="47" fill="white"/>
-</clipPath>
-<clipPath id="svg_id_1_2965_clip1_1_2965">
-<rect width="47" height="47" fill="white"/>
-</clipPath>
-</defs>
-</svg>
-</div>
-<div class="layer-container-14">
-<h3 class="text-6">Waze</h3>
-</div>
-</div>
-</div>
-<div class="layer-address-15">
-<h3 class="text-7">563<br>
-Jalan Dato Mohd Sidin<br>
-41300, Klang<br>
-Selangor Darul Ehsan</h3>
-</div>
-</div>
-</div>
-  </div>
-</body>
-</html>
+
+  <main class="page">
+    <section class="location-card" aria-labelledby="location-heading">
+
+      <h1 id="location-heading" class="header">
+        LOKASI MAJLIS
+      </h1>
+
+      <div class="location-name" aria-label="The Glass Tree by Zuljannah">
+        <span>THE GLASS TREE</span>
+        <span>BY ZULJANNAH</span>
+      </div>
+
+      <address class="address">
+        <span class="address-line">563</span>
+        <span class="address-line">Jalan Dato Mohd Sidin</span>
+        <span class="address-line">41300, Klang</span>
+        <span class="address-line">Selangor Darul Ehsan</span>
+      </address>
+
+      <!--
+        GOOGLE MAPS
+        Google Maps' official cross-platform Maps URL is used.
+        On mobile, Google Maps opens in the app when installed;
+        otherwise the browser version opens automatically.
+      -->
+      <div class="map-buttons">
+
+        <a class="map-button" href="https://www.google.com/maps/dir/?api=1&amp;destination=THE%20GLASS%20TREE%20BY%20ZULJANNAH%2C%20563%20Jalan%20Dato%20Mohd%20Sidin%2C%2041300%20Klang%2C%20Selangor%20Darul%20Ehsan%2C%20Malaysia&amp;travelmode=driving" aria-label="Open this wedding location in Google Maps">
+          <!-- Recognizable Google Maps brand icon -->
+          <img class="icon brand-icon" src="https://cdn.simpleicons.org/googlemaps/FFFFFF" alt="" aria-hidden="true" loading="eager">
+
+          <span>Maps</span>
+        </a>
+
+        <!--
+          WAZE
+          Waze's official Deep Link URL is used.
+          On mobile, Waze opens in the app when installed;
+          otherwise Waze's web experience opens.
+        -->
+        <a class="map-button" href="https://waze.com/ul?q=THE%20GLASS%20TREE%20BY%20ZULJANNAH%2C%20563%20Jalan%20Dato%20Mohd%20Sidin%2C%2041300%20Klang%2C%20Selangor%20Darul%20Ehsan%2C%20Malaysia&amp;navigate=yes" aria-label="Open this wedding location in Waze">
+          <!-- Correct Waze brand icon -->
+          <img class="icon brand-icon" src="https://cdn.simpleicons.org/waze/FFFFFF" alt="" aria-hidden="true" loading="eager">
+
+          <span>Waze</span>
+        </a>
+
+      </div>
+
+      <p class="footer-note">
+        Sila pilih aplikasi peta pilihan anda.
+      </p>
+    </section>
+  </main>
+
+
+
+</body></html>
